@@ -1,0 +1,5 @@
+---
+name: Migrations
+migrations_namespace: migrations
+table_name: migration_version
+migrations_directory: ./migrations
