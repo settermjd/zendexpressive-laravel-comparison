@@ -21,5 +21,8 @@ return [
             Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
             Zend\Db\Adapter\Adapter::class => Zend\Db\Adapter\AdapterServiceFactory::class,
         ],
+        'abstract_factories' => [
+            App\ServiceManager\AbstractFactory\TableGatewayAbstractFactory::class,
+        ]
     ],
 ];
