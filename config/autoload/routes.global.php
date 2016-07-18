@@ -8,6 +8,7 @@ return [
         ],
         'factories' => [
             App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
+            App\Action\ViewUrlsPageAction::class => App\Action\ViewUrlsPageFactory::class,
         ],
     ],
 
@@ -22,6 +23,12 @@ return [
             'name' => 'api.ping',
             'path' => '/api/ping',
             'middleware' => App\Action\PingAction::class,
+            'allowed_methods' => ['GET'],
+        ],
+        [
+            'name' => 'view-urls',
+            'path' => '/view-urls',
+            'middleware' => App\Action\ViewUrlsPageAction::class,
             'allowed_methods' => ['GET'],
         ],
     ],
