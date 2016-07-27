@@ -9,21 +9,16 @@ return [
         'factories' => [
             App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
             App\Action\ViewUrlsPageAction::class => App\Action\ViewUrlsPageFactory::class,
+            App\Action\AddUrlPageAction::class => App\Action\AddUrlPageFactory::class,
         ],
     ],
 
     'routes' => [
         [
-            'name' => 'home',
-            'path' => '/',
-            'middleware' => App\Action\HomePageAction::class,
-            'allowed_methods' => ['GET'],
-        ],
-        [
-            'name' => 'api.ping',
-            'path' => '/api/ping',
-            'middleware' => App\Action\PingAction::class,
-            'allowed_methods' => ['GET'],
+            'name' => 'url.add',
+            'path' => '/add-url',
+            'middleware' => App\Action\AddUrlPageAction::class,
+            'allowed_methods' => ['GET', 'POST'],
         ],
         [
             'name' => 'view-urls',
