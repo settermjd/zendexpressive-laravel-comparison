@@ -21,8 +21,8 @@ return [
             'allowed_methods' => ['GET', 'POST'],
         ],
         [
-            'name' => 'view-urls',
-            'path' => '/view-urls',
+            'name' => 'home',
+            'path' => '/',
             'middleware' => App\Action\ViewUrlsPageAction::class,
             'allowed_methods' => ['GET'],
         ],
